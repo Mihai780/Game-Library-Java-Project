@@ -1,0 +1,16 @@
+meta {
+  name: Return Tags
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/rest/tags
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

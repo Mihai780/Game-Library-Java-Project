@@ -1,0 +1,15 @@
+meta {
+  name: Return Games
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{baseUrl}}/rest/games
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

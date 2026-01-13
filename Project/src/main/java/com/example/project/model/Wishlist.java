@@ -1,5 +1,6 @@
 package com.example.project.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
@@ -16,7 +17,7 @@ public class Wishlist {
 
     @OneToOne(optional = false)
     @JoinColumn(name = "user_id", nullable = false, unique = true)
-    @JsonIgnoreProperties({ "wishlist", "ownedGames" })
+    @JsonIgnore
     private User user;
 
     @ManyToMany

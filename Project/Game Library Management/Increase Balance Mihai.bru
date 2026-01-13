@@ -1,0 +1,20 @@
+meta {
+  name: Increase Balance Mihai
+  type: http
+  seq: 22
+}
+
+post {
+  url: {{baseUrl}}/rest/users/1/balance
+  body: json
+  auth: inherit
+}
+
+body:json {
+  { "amountCents": 20000 }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

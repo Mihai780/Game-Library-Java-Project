@@ -1,0 +1,22 @@
+meta {
+  name: Create Elden Ring Game
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/rest/games
+  body: json
+  auth: inherit
+}
+
+body:json {
+  { 
+    "name": "Elden Ring" 
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

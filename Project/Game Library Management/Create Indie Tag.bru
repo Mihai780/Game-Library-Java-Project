@@ -1,0 +1,23 @@
+meta {
+  name: Create Indie Tag
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/rest/tags
+  body: json
+  auth: inherit
+}
+
+body:json {
+  { 
+    "name": "Indie" 
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

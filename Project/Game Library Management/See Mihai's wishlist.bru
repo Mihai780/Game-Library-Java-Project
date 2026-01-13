@@ -1,0 +1,15 @@
+meta {
+  name: See Mihai's wishlist
+  type: http
+  seq: 25
+}
+
+get {
+  url: {{baseUrl}}/rest/wishlists/user/1/games
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,5 +1,6 @@
 package com.example.project.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
@@ -24,7 +25,7 @@ public class Game {
     @JsonIgnoreProperties("games")
     private Set<GameTag> tags = new HashSet<>();
 
-    @JsonIgnoreProperties({ "owners" })
+    @JsonIgnore
     @ManyToMany(mappedBy = "ownedGames")
     private Set<User> owners = new HashSet<>();
 

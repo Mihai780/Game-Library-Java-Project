@@ -1,0 +1,22 @@
+meta {
+  name: Create Terraria Game
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{baseUrl}}/rest/games
+  body: json
+  auth: inherit
+}
+
+body:json {
+  { 
+    "name": "Terraria" 
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
